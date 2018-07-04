@@ -131,7 +131,7 @@ public class PayUtils {
             return null;
         }
     }
-    public static List<Map<String, Object>> getCatMoneyList1(JdbcUtils ju, String cat, String tb) {
+    public static List<Map<String, Object>> getCatMoneyList12(JdbcUtils ju, String cat, String tb) {
 
 
         String sql ="          select FORMAT((sum(`money`)/(select sum(`money`)    from mounttest2 where `cat`='"+cat+"'))*100,2) as percentage from "+tb+" where `cat`='"+cat+"' GROUP BY `cycle` ;\n";
